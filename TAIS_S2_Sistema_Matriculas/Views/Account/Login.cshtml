@@ -1,0 +1,99 @@
+﻿@using TAIS_S2_Sistema_Matriculas.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Iniciar sesión";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+@*<div class="login-logo">
+    <a href="index.html">
+        <img class="align-content" src="images/logo.png" alt="">
+    </a>
+</div>
+<div class="login-form">
+    <form>
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Remember Me
+            </label>
+            <label class="pull-right">
+                <a href="#">Forgotten Password?</a>
+            </label>
+
+        </div>
+        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+    </form>
+</div>*@
+
+
+
+
+
+
+
+
+
+
+
+<div class="login-logo">
+    <a href="index.html">
+        <img class="align-content" src="images/logo.png" alt="">
+    </a>
+</div>
+<div class="login-form">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "" })
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                </div>
+            </div>
+        </div>
+       
+        <input type="submit" value="Iniciar sesión" class="btn btn-success btn-flat m-b-30 m-t-30" />
+
+        @*<p>
+            @Html.ActionLink("Registrar como nuevo usuario", "Register")
+        </p>*@
+        @* Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña
+            <p>
+                @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
+            </p>*@
+    }
+</div>
+
+
+
+@*<div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>*@
+
+
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

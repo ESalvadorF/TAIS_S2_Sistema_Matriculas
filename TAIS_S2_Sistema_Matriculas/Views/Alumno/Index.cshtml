@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TAIS_S2_Sistema_Matriculas.Models.Alumno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Alumnos</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nroMatricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apePaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apeMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.priNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otroNombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nroMatricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apePaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apeMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.priNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otroNombre)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.codEducando }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.codEducando }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.codEducando })
+        </td>
+    </tr>
+}
+
+</table>
