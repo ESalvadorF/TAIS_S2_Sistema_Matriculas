@@ -197,6 +197,7 @@
     <Compile Include="Context\DataStore.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlumnoController.cs" />
+    <Compile Include="Controllers\AlumnoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PersonalController.cs" />
@@ -308,6 +309,13 @@
     <Content Include="Views\Personal\Create.cshtml" />
     <Content Include="Views\Alumno\Index.cshtml" />
     <Content Include="Views\Alumno\Create.cshtml" />
+    <Content Include="Views\Alumno\Edit.cshtml" />
+    <Content Include="Views\Alumno\Delete.cshtml" />
+    <Content Include="Views\Alumnoes\Create.cshtml" />
+    <Content Include="Views\Alumnoes\Delete.cshtml" />
+    <Content Include="Views\Alumnoes\Details.cshtml" />
+    <Content Include="Views\Alumnoes\Edit.cshtml" />
+    <Content Include="Views\Alumnoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

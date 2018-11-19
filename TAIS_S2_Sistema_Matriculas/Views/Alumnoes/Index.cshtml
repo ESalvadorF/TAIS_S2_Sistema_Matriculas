@@ -1,0 +1,213 @@
+﻿@model IEnumerable<TAIS_S2_Sistema_Matriculas.Models.Alumno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nroMatricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apePaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apeMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.priNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otroNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.escala)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.añoIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.provincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lenguaMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoCivil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.colegioProcedencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domicilio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dDepartamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dProvincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dDistrito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medioTransporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.demoraLlegar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.energiaElectrica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.instalacionAgua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desague)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sshh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nroHabitaciones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nroHabitantes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.situacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nroMatricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apePaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apeMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.priNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otroNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.escala)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.añoIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.provincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lenguaMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoCivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.colegioProcedencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domicilio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dDepartamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dProvincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dDistrito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medioTransporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.demoraLlegar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.energiaElectrica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.instalacionAgua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desague)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sshh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nroHabitaciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nroHabitantes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.situacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codEducando }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codEducando }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codEducando })
+        </td>
+    </tr>
+}
+
+</table>
