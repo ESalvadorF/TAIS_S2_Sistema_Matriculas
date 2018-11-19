@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace TAIS_S2_Sistema_Matriculas.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
