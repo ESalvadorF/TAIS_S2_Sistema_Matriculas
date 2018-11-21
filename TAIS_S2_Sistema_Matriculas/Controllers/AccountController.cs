@@ -136,7 +136,7 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
 
         //
         // GET: /Account/Register
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();

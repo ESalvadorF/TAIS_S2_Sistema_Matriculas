@@ -10,7 +10,7 @@ using TAIS_S2_Sistema_Matriculas.Models;
 
 namespace TAIS_S2_Sistema_Matriculas.Controllers
 {
-    [Authorize (Roles = "Admin")]
+    
     public class AlumnoController : Controller
     {
         private DataStore db = new DataStore();
