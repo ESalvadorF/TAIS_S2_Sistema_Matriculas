@@ -15,6 +15,9 @@ namespace TAIS_S2_Sistema_Matriculas.Models
 
         public int IdGrado { get; set; }
 
-        public Grado Grado { get; set; }
+        public virtual Grado Grado { get; set; }
+
+        public virtual ICollection<Matricula> Matriculas { get; set; }
+
     }
 }

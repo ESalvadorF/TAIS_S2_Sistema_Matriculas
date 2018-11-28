@@ -15,8 +15,11 @@ namespace TAIS_S2_Sistema_Matriculas.Models
 
         public int IdNivel { get; set; }
 
-        public ICollection<Seccion> Seccions { get; set; }
-
         public virtual Nivel Nivel { get; set; }
+
+
+        public virtual ICollection<Seccion> Seccions { get; set; }
+
+        
     }
 }

@@ -198,18 +198,41 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\AlumnoesController.cs" />
+    <Compile Include="Controllers\DepartamentoesController.cs" />
+    <Compile Include="Controllers\DistritoesController.cs" />
+    <Compile Include="Controllers\GradoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MatriculasController.cs" />
+    <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Controllers\PersonalController.cs" />
+    <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\UsersHelper.cs" />
+    <Compile Include="Migrations\201811181700577_InitialCreate.cs" />
+    <Compile Include="Migrations\201811181700577_InitialCreate.Designer.cs">
+      <DependentUpon>201811181700577_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811210306474_AddSeccionFieldToModelAlumno.cs" />
+    <Compile Include="Migrations\201811210306474_AddSeccionFieldToModelAlumno.Designer.cs">
+      <DependentUpon>201811210306474_AddSeccionFieldToModelAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\Distrito.cs" />
+    <Compile Include="Models\Grado.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Matricula.cs" />
+    <Compile Include="Models\Nivel.cs" />
+    <Compile Include="Models\Pais.cs" />
     <Compile Include="Models\Personal.cs" />
+    <Compile Include="Models\Provincia.cs" />
+    <Compile Include="Models\Departamento.cs" />
+    <Compile Include="Models\Seccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -270,7 +293,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -311,11 +336,44 @@
     <Content Include="Views\Alumno\Create.cshtml" />
     <Content Include="Views\Alumno\Edit.cshtml" />
     <Content Include="Views\Alumno\Delete.cshtml" />
+    <Content Include="Views\Gradoes\Create.cshtml" />
+    <Content Include="Views\Gradoes\Delete.cshtml" />
+    <Content Include="Views\Gradoes\Details.cshtml" />
+    <Content Include="Views\Gradoes\Edit.cshtml" />
+    <Content Include="Views\Gradoes\Index.cshtml" />
+    <Content Include="Views\Pais\Create.cshtml" />
+    <Content Include="Views\Pais\Delete.cshtml" />
+    <Content Include="Views\Pais\Details.cshtml" />
+    <Content Include="Views\Pais\Edit.cshtml" />
+    <Content Include="Views\Pais\Index.cshtml" />
+    <Content Include="Views\Departamentoes\Create.cshtml" />
+    <Content Include="Views\Departamentoes\Delete.cshtml" />
+    <Content Include="Views\Departamentoes\Details.cshtml" />
+    <Content Include="Views\Departamentoes\Edit.cshtml" />
+    <Content Include="Views\Departamentoes\Index.cshtml" />
+    <Content Include="Views\Provincias\Create.cshtml" />
+    <Content Include="Views\Provincias\Delete.cshtml" />
+    <Content Include="Views\Provincias\Details.cshtml" />
+    <Content Include="Views\Provincias\Edit.cshtml" />
+    <Content Include="Views\Provincias\Index.cshtml" />
+    <Content Include="Views\Distritoes\Create.cshtml" />
+    <Content Include="Views\Distritoes\Delete.cshtml" />
+    <Content Include="Views\Distritoes\Details.cshtml" />
+    <Content Include="Views\Distritoes\Edit.cshtml" />
+    <Content Include="Views\Distritoes\Index.cshtml" />
     <Content Include="Views\Alumnoes\Create.cshtml" />
     <Content Include="Views\Alumnoes\Delete.cshtml" />
     <Content Include="Views\Alumnoes\Details.cshtml" />
     <Content Include="Views\Alumnoes\Edit.cshtml" />
     <Content Include="Views\Alumnoes\Index.cshtml" />
+    <Content Include="Views\Matriculas\Create.cshtml" />
+    <Content Include="Views\Matriculas\Delete.cshtml" />
+    <Content Include="Views\Matriculas\Details.cshtml" />
+    <Content Include="Views\Matriculas\Edit.cshtml" />
+    <Content Include="Views\Matriculas\Index.cshtml" />
+    <Content Include="Views\Alumno\Details.cshtml" />
+    <Content Include="Views\Alumno\Reporte.cshtml" />
+    <Content Include="Views\Matriculas\Reporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -338,6 +396,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811181700577_InitialCreate.resx">
+      <DependentUpon>201811181700577_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811210306474_AddSeccionFieldToModelAlumno.resx">
+      <DependentUpon>201811210306474_AddSeccionFieldToModelAlumno.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

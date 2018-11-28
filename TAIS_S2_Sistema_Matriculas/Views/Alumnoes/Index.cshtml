@@ -12,97 +12,31 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nroMatricula)
+            @Html.DisplayNameFor(model => model.Distrito.Descripcion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.dni)
+            @Html.DisplayNameFor(model => model.Dni)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.apePaterno)
+            @Html.DisplayNameFor(model => model.ApePaterno)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.apeMaterno)
+            @Html.DisplayNameFor(model => model.ApeMaterno)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.priNombre)
+            @Html.DisplayNameFor(model => model.PriNombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.otroNombre)
+            @Html.DisplayNameFor(model => model.OtroNombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.sexo)
+            @Html.DisplayNameFor(model => model.Sexo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.pais)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.escala)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.añoIngreso)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.departamento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.provincia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.lenguaMaterno)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.estadoCivil)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.religion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.colegioProcedencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.domicilio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dDepartamento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dProvincia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dDistrito)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.medioTransporte)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.demoraLlegar)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.material)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.energiaElectrica)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.instalacionAgua)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.desague)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.sshh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nroHabitaciones)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nroHabitantes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.situacion)
+            @Html.DisplayNameFor(model => model.Domicilio)
         </th>
         <th></th>
     </tr>
@@ -110,102 +44,36 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.nroMatricula)
+            @Html.DisplayFor(modelItem => item.Distrito.Descripcion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.dni)
+            @Html.DisplayFor(modelItem => item.Dni)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.apePaterno)
+            @Html.DisplayFor(modelItem => item.ApePaterno)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.apeMaterno)
+            @Html.DisplayFor(modelItem => item.ApeMaterno)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.priNombre)
+            @Html.DisplayFor(modelItem => item.PriNombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.otroNombre)
+            @Html.DisplayFor(modelItem => item.OtroNombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.sexo)
+            @Html.DisplayFor(modelItem => item.Sexo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.fechaNacimiento)
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.pais)
+            @Html.DisplayFor(modelItem => item.Domicilio)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.escala)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.añoIngreso)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.departamento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.provincia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lenguaMaterno)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.estadoCivil)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.religion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.colegioProcedencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.domicilio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dDepartamento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dProvincia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dDistrito)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.medioTransporte)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.demoraLlegar)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.material)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.energiaElectrica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.instalacionAgua)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.desague)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.sshh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nroHabitaciones)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nroHabitantes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.situacion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.codEducando }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codEducando }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.codEducando })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Codigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo })
         </td>
     </tr>
 }

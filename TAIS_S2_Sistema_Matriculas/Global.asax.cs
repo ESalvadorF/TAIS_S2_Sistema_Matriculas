@@ -7,6 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Helpers;
 using TAIS_S2_Sistema_Matriculas.Helpers;
+using System.Data.Entity;
 
 namespace TAIS_S2_Sistema_Matriculas
 {
@@ -14,6 +15,10 @@ namespace TAIS_S2_Sistema_Matriculas
     {
         protected void Application_Start()
         {
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<
+                    Context.DataStore,
+                    Migrations.Configuration>());
             this.CheckSuperUserAndRoles();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

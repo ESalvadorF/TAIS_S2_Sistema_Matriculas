@@ -1,0 +1,65 @@
+﻿@model TAIS_S2_Sistema_Matriculas.Models.Matricula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matricula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alumno.Dni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alumno.Dni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoMatricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoMatricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoPago)
+        </dd>        
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaMatricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaMatricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPeriodo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPeriodo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idMatricula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

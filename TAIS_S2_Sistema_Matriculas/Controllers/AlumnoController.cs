@@ -21,8 +21,14 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
             return View(db.Alumnos.ToList());
         }
 
+
+        public ActionResult Reporte()
+        {
+            return View("Reporte",db.Alumnos.ToList());
+        }
+
         // GET: Alumnoes/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -36,9 +42,11 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
             return View(alumno);
         }
 
+
         // GET: Alumnoes/Create
         public ActionResult Create()
         {
+            ViewBag.IdDistrito = new SelectList(db.Distritoes, "IdDistrito", "Descripcion");
             return View();
         }
 
@@ -47,7 +55,7 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "codEducando,nroMatricula,dni,apePaterno,apeMaterno,priNombre,otroNombre,sexo,fechaNacimiento,pais,escala,añoIngreso,departamento,provincia,lenguaMaterno,estadoCivil,religion,colegioProcedencia,domicilio,dDepartamento,dProvincia,dDistrito,medioTransporte,demoraLlegar,material,energiaElectrica,instalacionAgua,desague,sshh,nroHabitaciones,nroHabitantes,situacion")] Alumno alumno)
+        public ActionResult Create([Bind(Include = "Codigo,Dni,ApePaterno,ApeMaterno,PriNombre,OtroNombre,Sexo,FechaNacimiento,IdDistrito,Domicilio")] Alumno alumno)
         {
             if (ModelState.IsValid)
             {
@@ -55,12 +63,12 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.IdDistrito = new SelectList(db.Distritoes, "IdDistrito", "Descripcion", alumno.IdDistrito);
             return View(alumno);
         }
 
         // GET: Alumnoes/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -71,6 +79,7 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IdDistrito = new SelectList(db.Distritoes, "IdDistrito", "Descripcion", alumno.IdDistrito);
             return View(alumno);
         }
 
@@ -79,7 +88,7 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "codEducando,nroMatricula,dni,apePaterno,apeMaterno,priNombre,otroNombre,sexo,fechaNacimiento,pais,escala,añoIngreso,departamento,provincia,lenguaMaterno,estadoCivil,religion,colegioProcedencia,domicilio,dDepartamento,dProvincia,dDistrito,medioTransporte,demoraLlegar,material,energiaElectrica,instalacionAgua,desague,sshh,nroHabitaciones,nroHabitantes,situacion")] Alumno alumno)
+        public ActionResult Edit([Bind(Include = "Codigo,Dni,ApePaterno,ApeMaterno,PriNombre,OtroNombre,Sexo,FechaNacimiento,IdDistrito,Domicilio")] Alumno alumno)
         {
             if (ModelState.IsValid)
             {
@@ -87,11 +96,12 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.IdDistrito = new SelectList(db.Distritoes, "IdDistrito", "Descripcion", alumno.IdDistrito);
             return View(alumno);
         }
 
         // GET: Alumnoes/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -108,7 +118,7 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
         // POST: Alumnoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Alumno alumno = db.Alumnos.Find(id);
             db.Alumnos.Remove(alumno);
@@ -124,5 +134,6 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

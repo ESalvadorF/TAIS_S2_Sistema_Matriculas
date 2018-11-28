@@ -12,7 +12,7 @@ namespace TAIS_S2_Sistema_Matriculas.Models
         public int IdNivel { get; set; }
 
         public string Descripcion { get; set; }
-
-        public ICollection<Grado> Grados { get; set; }
+       
+        public virtual ICollection<Grado> Grados { get; set; }
     }
 }

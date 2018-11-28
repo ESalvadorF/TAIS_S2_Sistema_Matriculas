@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TAIS_S2_Sistema_Matriculas.Models.Matricula>
+
+@{
+    ViewBag.Title = "Matriculas";
+}
+
+<h2>Matriculas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nueva Matricula", "Create")
+    <br />
+    @Html.ActionLink("Generar reporte", "Reporte")
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alumno.Dni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seccion.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoMatricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaMatricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPeriodo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alumno.Dni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seccion.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoMatricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaMatricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPeriodo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idMatricula }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idMatricula }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idMatricula })
+        </td>
+    </tr>
+}
+
+</table>
