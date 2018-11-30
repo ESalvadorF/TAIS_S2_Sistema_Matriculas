@@ -42,6 +42,19 @@ namespace TAIS_S2_Sistema_Matriculas.Controllers
             return View(alumno);
         }
 
+        public ActionResult ReporteAlumno(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Alumno alumno = db.Alumnos.Find(id);
+            if (alumno == null)
+            {
+                return HttpNotFound();
+            }
+            return View(alumno);
+        }
 
         // GET: Alumnoes/Create
         public ActionResult Create()

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAIS_S2_Sistema_Matriculas", "TAIS_S2_Sistema_Matriculas\TAIS_S2_Sistema_Matriculas.csproj", "{479940E0-0AA7-446A-B2C5-18B0AAE48452}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tais_Matricula", "TAIS_S2_Sistema_Matriculas\Tais_Matricula.csproj", "{479940E0-0AA7-446A-B2C5-18B0AAE48452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
